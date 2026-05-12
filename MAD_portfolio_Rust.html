@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>MAD.SYS — Mouhamed Abdallah Dia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,400;0,700;0,800;1,400&family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<link rel="stylesheet" href="MAD_portoflio_Rust.css">
+
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Aller au contenu</a>
+<div id="c-dot"></div>
+<div id="c-cross"></div>
+
+<!-- OVERLAYS -->
+<div id="scanlines"></div>
+<div id="vignette"></div>
+
+<!-- THREE.JS BG -->
+<canvas id="bg-canvas"></canvas>
+
+<!-- PARTICLE CANVAS -->
+<canvas id="particle-canvas"></canvas>
+
+<!-- WASM BADGE -->
+<div id="wasm-badge">
+  <span class="wasm-title">RUST/WASM MODULE</span>
+  <span>particle_engine::v1.0.0</span>
+  <span id="wasm-counter">particles: 0 | fps: --</span>
+</div>
+
+<!-- ═══ NAV ═══ -->
+<nav>
+  <div class="nav-logo"><span class="prompt">$</span> MAD.SYS</div>
+  <div class="nav-seg active">~/portfolio</div>
+  <div class="nav-seg">main</div>
+  <div class="nav-seg">v2.0.26</div>
+  <div class="nav-links">
+    <a href="#certifications">./certs</a>
+    <a href="#skills">./skills</a>
+    <a href="#experience">./exp</a>
+    <a href="#contact">./contact</a>
+  </div>
+  <div id="clock">--:--:--<span class="blink">_</span></div>
+</nav>
+<main id="main-content">
+
+<!-- ═══ HERO ═══ -->
+<section id="hero" style="padding-bottom:0;">
+  <div class="hero-inner">
+    <div class="hero-sys">
+      <span class="tag">FULL_STACK</span>
+      <span class="tag">AI_ENGINEER</span>
+      <span class="tag">CYBERSEC</span>
+      <span style="letter-spacing:.12em;">· DAKAR, SN · UAD ·</span>
+    </div>
+    <h1 class="hero-name">
+      <span class="glitch-wrap" data-t="MOUHAMED">MOUHAMED</span><br>
+      <span class="stroke">ABDALLAH</span><br>
+      <span class="accent glitch-wrap" data-t="DIA">DIA</span>
+    </h1>
+    <div class="hero-subtitle">
+      Full-Stack Developer · AI Engineering · Network Security · 13 International Certifications
+    </div>
+    <p class="hero-desc">
+      Étudiant en licence à l'<strong>Université Alioune Diop</strong> — armé de
+      <strong>5 cours Harvard</strong>, certifié Cisco CCNP, Azure AZ-700, AWS Advanced Networking et une IA de rang magistral.
+      Je construis des systèmes qui <strong>pensent, protègent et résistent</strong>.
+    </p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-sys btn-sys-primary"><span>// INIT_CONTACT →</span></a>
+      <a href="#certifications" class="btn-sys btn-sys-ghost">VIEW_CERTS</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hs"><div class="hs-n">13</div><div class="hs-l">CERTIFICATIONS</div></div>
+      <div class="hs"><div class="hs-n">05</div><div class="hs-l">HARVARD CS50</div></div>
+      <div class="hs"><div class="hs-n">12+</div><div class="hs-l">TECHNOLOGIES</div></div>
+      <div class="hs"><div class="hs-n">03</div><div class="hs-l">LANGUES</div></div>
+      <div class="hs"><div class="hs-n">∞</div><div class="hs-l">AMBITION</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-outer" style="position:relative;z-index:10;">
+  <div class="ticker-inner">
+    <span>RUST</span><span class="sep">⬡</span><span>WEBASSEMBLY</span><span class="sep">⬡</span><span>THREE.JS</span><span class="sep">⬡</span><span>CCNP_ENTERPRISE</span><span class="sep">⬡</span><span>AZURE_AZ700</span><span class="sep">⬡</span><span>AWS_ANS-C01</span><span class="sep">⬡</span><span>CS50_AI</span><span class="sep">⬡</span><span>CYBERSECURITY</span><span class="sep">⬡</span><span>FULL_STACK</span><span class="sep">⬡</span><span>PYTHON</span><span class="sep">⬡</span><span>SQL</span><span class="sep">⬡</span><span>NEURAL_NETWORKS</span><span class="sep">⬡</span><span>COMPTIA_N+</span><span class="sep">⬡</span>
+    <span>RUST</span><span class="sep">⬡</span><span>WEBASSEMBLY</span><span class="sep">⬡</span><span>THREE.JS</span><span class="sep">⬡</span><span>CCNP_ENTERPRISE</span><span class="sep">⬡</span><span>AZURE_AZ700</span><span class="sep">⬡</span><span>AWS_ANS-C01</span><span class="sep">⬡</span><span>CS50_AI</span><span class="sep">⬡</span><span>CYBERSECURITY</span><span class="sep">⬡</span><span>FULL_STACK</span><span class="sep">⬡</span><span>PYTHON</span><span class="sep">⬡</span><span>SQL</span><span class="sep">⬡</span><span>NEURAL_NETWORKS</span><span class="sep">⬡</span><span>COMPTIA_N+</span><span class="sep">⬡</span>
+  </div>
+</div>
+
+<!-- ═══ TERMINAL BLOCK ═══ -->
+<section style="padding:2rem 3rem;background:var(--ink2);position:relative;z-index:10;">
+  <div class="container">
+    <div class="terminal rev rd1">
+      <div class="term-bar">
+        <div class="term-dot td-r"></div><div class="term-dot td-y"></div><div class="term-dot td-g"></div>
+        <span class="term-title">mad@sys:~/profile — zsh — 120×32</span>
+      </div>
+      <div class="term-body">
+        <div class="term-line"><span class="term-prompt">mad@sys</span><span style="color:rgba(0,255,159,.3)">:</span><span style="color:var(--crt2)">~/profile</span><span style="color:rgba(0,255,159,.4)">$</span>&nbsp;<span class="term-cmd">cat about.rs</span></div>
+        <div style="height:.4rem;"></div>
+        <div class="term-out">// Rust struct pour Mouhamed Abdallah Dia</div>
+        <div class="term-out"><span style="color:var(--crt2);">struct</span> <span style="color:var(--amber);">Developer</span> {</div>
+        <div class="term-out">&nbsp;&nbsp;name: <span style="color:var(--crt);">"Mouhamed Abdallah Dia"</span>,</div>
+        <div class="term-out">&nbsp;&nbsp;stack: <span style="color:var(--crt);">vec!["Rust", "Python", "JS", "SQL", "Java"]</span>,</div>
+        <div class="term-out">&nbsp;&nbsp;certifications: <span style="color:var(--amber);">13u8</span>,</div>
+        <div class="term-out">&nbsp;&nbsp;location: <span style="color:var(--crt);">"Dakar, Sénégal"</span>,</div>
+        <div class="term-out">&nbsp;&nbsp;university: <span style="color:var(--crt);">"Université Alioune Diop"</span>,</div>
+        <div class="term-out">&nbsp;&nbsp;specialties: <span style="color:var(--crt);">vec!["AI", "Cybersec", "Cloud", "Networks"]</span>,</div>
+        <div class="term-out">&nbsp;&nbsp;available: <span style="color:var(--crt2);">true</span>,</div>
+        <div class="term-out">}</div>
+        <div style="height:.4rem;"></div>
+        <div class="term-line"><span class="term-prompt">mad@sys</span><span style="color:rgba(0,255,159,.3)">:</span><span style="color:var(--crt2)">~/profile</span><span style="color:rgba(0,255,159,.4)">$</span>&nbsp;<span class="term-cmd">wasm-pack build --target web <span class="blink">_</span></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CERTIFICATIONS ═══ -->
+<section id="certifications">
+  <div class="container">
+    <div class="sec-label rev">MODULE CERTIFICATIONS</div>
+    <h2 class="sec-title rev rd1">13 ARMES.<br><span class="dim">CHACUNE UNE</span> <span class="hi">MAÎTRISE.</span></h2>
+    <div class="cert-grid rev rd2">
+      <div class="cert-card span2">
+        <div class="cert-rank">// HARVARD · FLAGSHIP</div>
+        <div class="cert-issuer">HarvardX — CS50's Web Programming with Python & JavaScript</div>
+        <div class="cert-name">Advanced Web Technologies · Full-Stack Architecture</div>
+        <div class="cert-footer">
+          <span class="ctag ctag-y">With Merit</span>
+          <span class="ctag ctag-g">Harvard University</span>
+          <span class="cert-yr">JAN 2025</span>
+        </div>
+        <div class="cert-bg-num">01</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-rank">// HARVARD · CS50</div>
+        <div class="cert-issuer">HarvardX — edX</div>
+        <div class="cert-name">CS50 Cybersecurity — Security & Applied Defense</div>
+        <div class="cert-footer">
+          <span class="ctag ctag-g">Commendation</span>
+          <span class="cert-yr">NOV 2024</span>
+        </div>
+        <div class="cert-bg-num">02</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-rank">// HARVARD · CS50</div>
+        <div class="cert-issuer">HarvardX — edX</div>
+        <div class="cert-name">CS50 SQL — Data Modeling & Query Optimization</div>
+        <div class="cert-footer">
+          <span class="ctag ctag-y">With Distinction</span>
+          <span class="cert-yr">MAR 2025</span>
+        </div>
+        <div class="cert-bg-num">03</div>
+      </div>
+      <div class="cert-card span2">
+        <div class="cert-rank">// HARVARD · FLAGSHIP AI</div>
+        <div class="cert-issuer">HarvardX — CS50AI : Intelligence Artificielle</div>
+        <div class="cert-name">ML & Neural Networks — Niveau Magistral</div>
+        <div class="cert-footer">
+          <span class="ctag ctag-p">High Commendation</span>
+          <span class="ctag ctag-g">Neural Networks</span>
+          <span class="cert-yr">MAI 2026</span>
+        </div>
+        <div class="cert-bg-num">04</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-rank">// CISCO</div>
+        <div class="cert-issuer">Cisco Networking Academy</div>
+        <div class="cert-name">CCNA — Cisco Certified Network Associate (200-301)</div>
+        <div class="cert-footer">
+          <span class="ctag ctag-g">Exam 200-301</span>
+          <span class="cert-yr">MAI 2025</span>
+        </div>
+        <div class="cert-bg-num">05</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-rank">// CISCO PROFESSIONAL</div>
+        <div class="cert-issuer">Cisco Networking Academy</div>
+        <div class="cert-name">CCNP Enterprise — Core 350-401 ENCOR + Concentration</div>
+        <div class="cert-footer">
+          <span class="ctag ctag-y">350-401 ENCOR</span>
+          <span class="cert-yr">DÉC 2025</span>
+        </div>
+        <div class="cert-bg-num">06</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-rank">// MICROSOFT AZURE</div>
+        <div class="cert-issuer">Microsoft Certified</div>
+        <div class="cert-name">Azure Network Engineer Associate — AZ-700</div>
+        <div class="cert-footer">
+          <span class="ctag ctag-p">AZ-700</span>
+          <span class="cert-yr">JUN 2025</span>
+        </div>
+        <div class="cert-bg-num">07</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-rank">// AMAZON AWS</div>
+        <div class="cert-issuer">AWS Training & Certification</div>
+        <div class="cert-name">AWS Certified Advanced Networking — Specialty ANS-C01</div>
+        <div class="cert-footer">
+          <span class="ctag ctag-y">ANS-C01</span>
+          <span class="cert-yr">SEPT 2025</span>
+        </div>
+        <div class="cert-bg-num">08</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-rank">// COMPTIA</div>
+        <div class="cert-issuer">CompTIA</div>
+        <div class="cert-name">Network+ N10-009 — DoD 8570 Approved</div>
+        <div class="cert-footer">
+          <span class="ctag ctag-g">Vendor-Neutral</span>
+          <span class="cert-yr">NOV 2024</span>
+        </div>
+        <div class="cert-bg-num">09</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-rank">// GOOGLE</div>
+        <div class="cert-issuer">Google — Coursera</div>
+        <div class="cert-name">Project Management Professional Certificate — Agile</div>
+        <div class="cert-footer">
+          <span class="ctag ctag-y">With Honors</span>
+          <span class="cert-yr">FÉV 2026</span>
+        </div>
+        <div class="cert-bg-num">10</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-rank">// NEXUS AI</div>
+        <div class="cert-issuer">NEXUS Online</div>
+        <div class="cert-name">AI Engineering Professional Certificate</div>
+        <div class="cert-footer">
+          <span class="ctag ctag-p">High Commendation</span>
+          <span class="cert-yr">MAI 2026</span>
+        </div>
+        <div class="cert-bg-num">11</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-rank">// LINKEDIN</div>
+        <div class="cert-issuer">LinkedIn Learning</div>
+        <div class="cert-name">Communication & Leadership Foundations</div>
+        <div class="cert-footer">
+          <span class="ctag ctag-r">Top Performer</span>
+          <span class="cert-yr">AVR 2026</span>
+        </div>
+        <div class="cert-bg-num">12</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-rank">// CYBERPRO</div>
+        <div class="cert-issuer">CyberPro Academy</div>
+        <div class="cert-name">Networking & Cybersecurity Professional Training</div>
+        <div class="cert-footer">
+          <span class="ctag ctag-g">Professional</span>
+          <span class="cert-yr">MAR 2026</span>
+        </div>
+        <div class="cert-bg-num">13</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SKILLS ═══ -->
+<section id="skills">
+  <div class="container">
+    <div class="sec-label rev">MODULE SKILLS</div>
+    <h2 class="sec-title rev rd1">STACK &amp; <span class="dim">ARSENAL</span></h2>
+    <div class="skills-layout">
+      <div class="rev rd2">
+        <div style="font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;color:rgba(0,255,159,.25);border-bottom:1px solid rgba(0,255,159,.07);padding-bottom:.75rem;margin-bottom:1.5rem;">// DÉVELOPPEMENT</div>
+        <div class="skill-row"><span class="sk-name">HTML / CSS</span><div class="sk-track"><div class="sk-fill" data-v=".95"></div></div><span class="sk-pct">95%</span></div>
+        <div class="skill-row"><span class="sk-name">JavaScript</span><div class="sk-track"><div class="sk-fill" data-v=".88"></div></div><span class="sk-pct">88%</span></div>
+        <div class="skill-row"><span class="sk-name">Python</span><div class="sk-track"><div class="sk-fill" data-v=".85"></div></div><span class="sk-pct">85%</span></div>
+        <div class="skill-row"><span class="sk-name">SQL</span><div class="sk-track"><div class="sk-fill" data-v=".82"></div></div><span class="sk-pct">82%</span></div>
+        <div class="skill-row"><span class="sk-name">Java</span><div class="sk-track"><div class="sk-fill" data-v=".70"></div></div><span class="sk-pct">70%</span></div>
+        <div class="skill-row"><span class="sk-name">PHP</span><div class="sk-track"><div class="sk-fill" data-v=".72"></div></div><span class="sk-pct">72%</span></div>
+        <div class="skill-row"><span class="sk-name">Git & GitHub</span><div class="sk-track"><div class="sk-fill" data-v=".87"></div></div><span class="sk-pct">87%</span></div>
+      </div>
+      <div class="rev rd3">
+        <div style="font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;color:rgba(0,255,159,.25);border-bottom:1px solid rgba(0,255,159,.07);padding-bottom:.75rem;margin-bottom:1.5rem;">// RÉSEAU & SÉCURITÉ</div>
+        <div class="skill-row"><span class="sk-name">Cybersecurity</span><div class="sk-track"><div class="sk-fill" data-v=".90"></div></div><span class="sk-pct">90%</span></div>
+        <div class="skill-row"><span class="sk-name">CCNP / CCNA</span><div class="sk-track"><div class="sk-fill" data-v=".88"></div></div><span class="sk-pct">88%</span></div>
+        <div class="skill-row"><span class="sk-name">Azure Networking</span><div class="sk-track"><div class="sk-fill" data-v=".85"></div></div><span class="sk-pct">85%</span></div>
+        <div class="skill-row"><span class="sk-name">AWS Advanced Net.</span><div class="sk-track"><div class="sk-fill" data-v=".82"></div></div><span class="sk-pct">82%</span></div>
+        <div class="skill-row"><span class="sk-name">Artificial Intelligence</span><div class="sk-track"><div class="sk-fill" data-v=".80"></div></div><span class="sk-pct">80%</span></div>
+        <div class="skill-row"><span class="sk-name">Project Management</span><div class="sk-track"><div class="sk-fill" data-v=".78"></div></div><span class="sk-pct">78%</span></div>
+        <div class="skill-row"><span class="sk-name">Leadership & Comm.</span><div class="sk-track"><div class="sk-fill" data-v=".82"></div></div><span class="sk-pct">82%</span></div>
+      </div>
+    </div>
+    <div class="tag-cloud rev" style="margin-top:3rem;">
+      <span class="t-tag">Tailwind CSS</span><span class="t-tag">WebAssembly</span>
+      <span class="t-tag">Three.js</span><span class="t-tag">Machine Learning</span>
+      <span class="t-tag">Neural Networks</span><span class="t-tag">Cloud Architecture</span>
+      <span class="t-tag">Network Security</span><span class="t-tag">Agile / Scrum</span>
+      <span class="t-tag">Data Bases</span><span class="t-tag">Digital Comms</span>
+      <span class="t-tag">Photographie</span><span class="t-tag">Maintenance PC</span>
+      <span class="t-tag">Français · Anglais · Wolof</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EXPERIENCE ═══ -->
+<section id="experience">
+  <div class="container">
+    <div class="sec-label rev">MODULE EXPÉRIENCE</div>
+    <h2 class="sec-title rev rd1">TERRAIN &amp; <span class="hi">FORMATION</span></h2>
+    <div class="exp-grid">
+      <div class="rev rd2">
+        <div style="font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;color:rgba(0,255,159,.25);border-bottom:1px solid rgba(0,255,159,.07);padding-bottom:.75rem;margin-bottom:2rem;">// EXPÉRIENCE</div>
+        <div class="tl">
+          <div class="tl-item">
+            <div class="tl-yr">2023 — PRÉSENT</div>
+            <div class="tl-role">Responsable Communication</div>
+            <div class="tl-org">UAD Tech Club · Dakar, Sénégal</div>
+            <ul class="tl-ul">
+              <li>Gestion communication interne & externe du club</li>
+              <li>Création contenus numériques à fort impact</li>
+              <li>Coordination événements tech, ateliers & hackathons</li>
+              <li>Croissance présence digitale de la communauté</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="rev rd3">
+        <div style="font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;color:rgba(0,255,159,.25);border-bottom:1px solid rgba(0,255,159,.07);padding-bottom:.75rem;margin-bottom:2rem;">// FORMATION</div>
+        <div class="tl">
+          <div class="tl-item">
+            <div class="tl-yr">2023 — PRÉSENT</div>
+            <div class="tl-role">Licence — Dev., Admin. & Applications</div>
+            <div class="tl-org">Université Alioune Diop · Bambey, SN</div>
+            <ul class="tl-ul">
+              <li>Licence 1 — 2024/2025</li>
+              <li>Licence 2 — 2025/2026</li>
+            </ul>
+          </div>
+          <div class="tl-item">
+            <div class="tl-yr">2023 — 2026</div>
+            <div class="tl-role">5 Cours Harvard — CS50 Series</div>
+            <div class="tl-org">HarvardX · edX Platform</div>
+            <ul class="tl-ul">
+              <li>Web · SQL · Cybersecurity · AI · (series)</li>
+              <li>With Merit · High Commendation · With Distinction</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MANIFESTO ═══ -->
+<section id="manifesto">
+  <div class="container">
+    <div class="manifesto-text" id="manifesto-words"></div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-layout">
+      <div class="rev">
+        <div class="sec-label">MODULE CONTACT</div>
+        <div class="contact-big">INIT<br><span>CONNECT</span><br>ION</div>
+        <p class="contact-copy">
+          // Disponible pour collaborations, freelance,<br>
+          // stages ou opportunités professionnelles.<br>
+          // Based in Dakar — remote-ready.<br>
+          // Status: <span style="color:var(--crt);">ONLINE</span> ●
+        </p>
+      </div>
+      <div class="rev rd2">
+        <div class="cl-list">
+          <a href="mailto:mouhamedabdallah.dia@uadb.edu.sn" class="cl-item">
+            <div class="cl-sym">@</div>
+            <div class="cl-info"><div class="cl-lbl">EMAIL</div><div class="cl-val">mouhamedabdallah.dia@uadb.edu.sn</div></div>
+            <div class="cl-arr">→</div>
+          </a>
+          <a href="tel:+221781614500" class="cl-item">
+            <div class="cl-sym">✆</div>
+            <div class="cl-info"><div class="cl-lbl">TÉLÉPHONE</div><div class="cl-val">+221 78 161 45 00</div></div>
+            <div class="cl-arr">→</div>
+          </a>
+          <a href="https://www.linkedin.com/in/mouhamed-abdallah-dia-302b743b2" target="_blank" rel="noopener noreferrer" class="cl-item">
+            <div class="cl-sym">in</div>
+            <div class="cl-info"><div class="cl-lbl">LINKEDIN</div><div class="cl-val">Mouhamed Abdallah Dia</div></div>
+            <div class="cl-arr">→</div>
+          </a>
+          <a href="https://saotof-prog.github.io/Cv-Complet/" target="_blank" rel="noopener noreferrer" class="cl-item">
+            <div class="cl-sym">⬡</div>
+            <div class="cl-info"><div class="cl-lbl">GITHUB PAGES</div><div class="cl-val">saotof-prog.github.io</div></div>
+            <div class="cl-arr">→</div>
+          </a>
+          <div class="cl-item" style="cursor:default;">
+            <div class="cl-sym">◎</div>
+            <div class="cl-info"><div class="cl-lbl">LOCALISATION</div><div class="cl-val">Sicap, Dakar — Sénégal</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <span>© 2026 MOUHAMED ABDALLAH DIA — ALL RIGHTS RESERVED</span>
+  <span>RUST/WASM + THREE.JS + CANVAS ENGINE · DAKAR, SN</span>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════
+     JAVASCRIPT ENGINE
+     1. THREE.JS — WebGL 3D Background
+     2. RUST WASM SIMULATION — Particle Physics Engine
+     3. CANVAS — Particle Renderer
+     4. UI Systems
+═══════════════════════════════════════════════════ -->
+<script src="MAD_portoflio_Rust.js"></script>
+</body>
+</html>
