@@ -167,13 +167,13 @@ mad-portfolio/
 ### Option 1 — GitHub Pages (actuel)
 
 ```bash
-git clone https://github.com/saotof-prog/Cv-Complet
+git clone https://github.com/saotof-prog/portoflio
 cd Cv-Complet
 # Remplacer index.html par le nouveau portfolio
 git add .
 git commit -m "feat: MAD.SYS portfolio v2 — Rust/WASM + Three.js"
 git push origin main
-# Disponible sur : https://saotof-prog.github.io/Cv-Complet/
+# Disponible sur : https://saotof-prog.github.io/portoflio/
 ```
 
 ### Option 2 — Netlify / Vercel (drag & drop)
@@ -218,7 +218,7 @@ Full-Stack Developer · AI Engineer · Network Security Specialist
 - 📧 mouhamedabdallah.dia@uadb.edu.sn
 - 📞 +221 78 161 45 00
 - 💼 [LinkedIn](https://www.linkedin.com/in/mouhamed-abdallah-dia-302b743b2)
-- 🌐 [Portfolio](https://saotof-prog.github.io/Cv-Complet/)
+- 🌐 [Portfolio](https://saotof-prog.github.io/portoflio/)
 
 ---
 
