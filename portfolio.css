@@ -431,6 +431,49 @@ section{
 .manifesto-text .w.pur{color:var(--crt2);}
 
 /* ═══════════════════════════════
+   CONTACT FORM
+═══════════════════════════════ */
+#form-section{
+  background:var(--ink2);
+  border-top:1px solid rgba(0,255,159,.08);
+  border-bottom:1px solid rgba(0,255,159,.08);
+}
+.form-wrapper{
+  max-width:600px;margin:0 auto;padding:3rem 0;
+}
+.form-header{margin-bottom:2.5rem;}
+.contact-form{display:flex;flex-direction:column;gap:1.5rem;}
+.form-group{display:flex;flex-direction:column;gap:.5rem;}
+.form-label{
+  font-family:var(--mono);font-size:.7rem;
+  letter-spacing:.15em;text-transform:uppercase;
+  color:rgba(0,255,159,.4);
+}
+.required{color:var(--crt3);}
+.form-input,.form-textarea{
+  background:rgba(0,255,159,.03);border:1px solid rgba(0,255,159,.15);
+  color:#d4d4dc;font-family:var(--mono);font-size:.85rem;
+  padding:.75rem 1rem;border-radius:0;transition:all .3s;
+  outline:none;
+}
+.form-input:focus,.form-textarea:focus{
+  border-color:var(--crt);background:rgba(0,255,159,.06);
+  box-shadow:0 0 0 2px rgba(0,255,159,.1);
+}
+.form-input::placeholder,.form-textarea::placeholder{
+  color:rgba(0,255,159,.15);
+}
+.form-textarea{resize:vertical;min-height:120px;}
+.form-actions{display:flex;align-items:center;gap:1.5rem;margin-top:1rem;}
+.form-status{
+  font-family:var(--mono);font-size:.75rem;
+  color:rgba(0,255,159,.4);
+  min-height:1.2rem;
+}
+.form-status.success{color:#22c55e;}
+.form-status.error{color:var(--crt3);}
+
+/* ═══════════════════════════════
    CONTACT
 ═══════════════════════════════ */
 #contact{
