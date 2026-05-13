@@ -218,7 +218,7 @@ Full-Stack Developer · AI Engineer · Network Security Specialist
 - 📧 mouhamedabdallah.dia@uadb.edu.sn
 - 📞 +221 78 161 45 00
 - 💼 [LinkedIn](https://www.linkedin.com/in/mouhamed-abdallah-dia-302b743b2)
-- 🌐 [Portfolio](https://saotof-prog.github.io/Cv-Complet/)
+- 🌐 [Portfolio](https://saotof-prog.github.io/portoflio/)
 
 ---
 
