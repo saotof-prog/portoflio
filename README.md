@@ -11,8 +11,8 @@
 ```
 
 > **Portfolio personnel ultra-technique** de Mouhamed Abdallah Dia —  
-> Développeur Full-Stack · AI Engineer · Cybersecurity Specialist  
-> Université Alioune Diop · 13 Certifications internationales
+> Développeur Full-Stack · AI Engineer · Agentic AI · Cybersecurity Specialist  
+> Université Alioune Diop · 19 Certifications internationales
 
 ---
 
@@ -213,7 +213,7 @@ npx serve .
 Full-Stack Developer · AI Engineer · Network Security Specialist
 
 - 🎓 Licence — Développement, Administration & Applications · UAD, Bambey
-- 🏆 13 Certifications internationales (Harvard, Cisco, Microsoft, AWS, Google...)
+- 🏆 19 Certifications internationales (Harvard, Vanderbilt, Stanford, Microsoft, IBM, Google...)
 - 🌍 Dakar, Sénégal · Disponible à distance
 - 📧 mouhamedabdallah.dia@uadb.edu.sn
 - 📞 +221 78 161 45 00
@@ -224,21 +224,44 @@ Full-Stack Developer · AI Engineer · Network Security Specialist
 
 ## 🏅 Certifications
 
-| # | Certification | Organisme | Mention | Année |
-|---|---------------|-----------|---------|-------|
-| 01 | CS50 Web Programming (Python & JS) | Harvard / edX | With Merit | 2025 |
-| 02 | CS50 Cybersecurity | HarvardX | Commendation | 2024 |
-| 03 | CS50 SQL | HarvardX | With Distinction | 2025 |
-| 04 | CS50AI — Intelligence Artificielle | HarvardX | High Commendation | 2026 |
-| 05 | CCNA 200-301 | Cisco | — | 2025 |
-| 06 | CCNP Enterprise (350-401 ENCOR) | Cisco | — | 2025 |
-| 07 | Azure Network Engineer Associate AZ-700 | Microsoft | Certified | 2025 |
-| 08 | AWS Advanced Networking ANS-C01 | Amazon | Specialty | 2025 |
-| 09 | CompTIA Network+ N10-009 | CompTIA | DoD 8570 | 2024 |
-| 10 | Google Project Management Professional | Google / Coursera | With Honors | 2026 |
-| 11 | AI Engineering Professional Certificate | NEXUS Online | High Commendation | 2026 |
-| 12 | Communication & Leadership Foundations | LinkedIn Learning | Top Performer | 2026 |
-| 13 | Networking & Cybersecurity Training | CyberPro Academy | Professional | 2026 |
+### 🤖 AI & Machine Learning
+| # | Certification | Organisme | Mention | Date |
+|---|---------------|-----------|---------|------|
+| 01 | CS50AI — Intelligence Artificielle, Niveau Magistral | HarvardX / edX | Summa Cum Laude | Mai 2026 |
+| 02 | AI Agents and Agentic AI Architecture in Python | Vanderbilt University (Dr. Jules White) | — | Juin 2026 |
+| 03 | AI Agents and Agentic AI with Python & Generative AI | Vanderbilt University (Dr. Jules White) | — | Juin 2026 |
+| 04 | Supervised Machine Learning: Regression and Classification | Stanford / DeepLearning.AI | ML Specialization | Juin 2026 |
+| 05 | Advanced Learning Algorithms | Stanford / DeepLearning.AI | ML Specialization | Juin 2026 |
+| 06 | Foundations of AI and Machine Learning | Microsoft | — | Juin 2026 |
+| 07 | AI and Machine Learning Algorithms and Techniques | Microsoft | — | Juin 2026 |
+| 08 | Building Intelligent Troubleshooting Agents | Microsoft | Agentic AI | Juin 2026 |
+
+### 🔐 Cybersecurity
+| # | Certification | Organisme | Mention | Date |
+|---|---------------|-----------|---------|------|
+| 09 | Cybersecurity Specialist Professional Certificate (12 cours) | IBM & ISC2 | — | 2026 |
+| 10 | Networking & Cybersecurity Professional Training | CyberPro Academy | With Honors | Mars 2026 |
+| 11 | Ethical Hacking 101: Beginner's Guide | SimpliLearn | — | Juin 2026 |
+
+### 🌐 Networking
+| # | Certification | Organisme | Mention | Date |
+|---|---------------|-----------|---------|------|
+| 12 | Azure Network Engineer Associate (AZ-700) | Microsoft | Certified | Oct 2026 |
+| 13 | Networking Fundamentals | Packt | — | Juin 2026 |
+| 14 | Network Implementations and Operations | Packt | — | Juin 2026 |
+
+### 📊 Data Analytics
+| # | Certification | Organisme | Mention | Date |
+|---|---------------|-----------|---------|------|
+| 15 | Ask Questions to Make Data-Driven Decisions | Google | — | Mai 2026 |
+| 16 | Prepare Data for Exploration | Google | — | Juin 2026 |
+| 17 | Process Data from Dirty to Clean | Google | — | Juin 2026 |
+| 18 | Python Libraries for Data Science | SimpliLearn | — | Juin 2026 |
+
+### 🏆 Leadership & Communication
+| # | Certification | Organisme | Mention | Date |
+|---|---------------|-----------|---------|------|
+| 19 | Professional Communication & Leadership Foundations | LinkedIn Learning | Top Performer | Avr 2026 |
 
 ---
 
